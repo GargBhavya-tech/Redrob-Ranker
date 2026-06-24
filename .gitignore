@@ -1,0 +1,45 @@
+# ============================================================
+#  Redrob Ranker — .gitignore
+#  NEVER commit the dataset, model caches, or scratch outputs.
+# ============================================================
+
+# --- Dataset (organizer-provided; large; do NOT redistribute) ---
+data/candidates.jsonl
+data/candidates.jsonl.gz
+*.jsonl
+!data/sample_candidates.json          # the small bundled sample is OK to keep
+
+# --- Generated / scratch outputs ---
+data/*.parquet
+data/sub_*.csv
+data/submission*.csv
+output/
+runs/
+*.tmp
+
+# Keep the canonical example + the official one you regenerate:
+!data/example_submission.csv
+
+# --- Model caches (downloaded at runtime; never commit weights) ---
+.cache/
+models/
+*.onnx
+*.bin
+*.safetensors
+~/.cache/huggingface
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
