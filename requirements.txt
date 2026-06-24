@@ -1,0 +1,3 @@
+polars
+msgspec
+scikit-learn
