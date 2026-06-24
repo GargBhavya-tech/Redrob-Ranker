@@ -108,27 +108,6 @@ Paytm, Google) in the 6–8 year band with concerns surfaced honestly.
 
 ---
 
-## What to push to GitHub
-
-Push the **files**, not a zip, and not the dataset. The included `.gitignore`
-already excludes the dataset, model caches, and scratch outputs.
-
-```bash
-bash init_git.sh                 # makes an honest, staged commit history
-git remote add origin https://github.com/<you>/redrob-ranker.git
-git branch -M main
-git push -u origin main
-```
-
-`init_git.sh` commits in build order (schema → features → stages → fusion →
-reasoning → evaluation → docs) so the history reflects real development rather
-than one flat "initial commit" (a Stage-4 elimination signal).
-
-**Do NOT commit:** `data/candidates.jsonl` (the 465 MB dataset), `__pycache__/`,
-model weights, or scratch CSVs — all already in `.gitignore`.
-
----
-
 ## The three deliverables
 
 1. **This repo** (public GitHub URL).
